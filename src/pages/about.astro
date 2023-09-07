@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Thu Chu" description="About Thu Chu background">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Jeanine White at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Welcome to my online portfolio! I'm <a href="https://thuberry.com/">Thu Chu</a> a finance professional with a passion for bridging the worlds of finance and technology to drive meaningful change. With a strong background in financial management, auditing, and risk management, I've had the privilege of working in diverse environments, each offering unique challenges and opportunities.
+					</p>
+					<p>
+I hold a First Class Honors degree in Accounting and Finance from the London Metropolitan University and have over eight years of experience in the finance sector. I have worked in various roles, from a Finance Volunteer to a Finance Manager, where I managed financial operations, including the completion of annual accounts. I also have experience as a Trainee Auditor, where I gained valuable insights into auditing processes and financial systems.
+          </p>
+					<p>
+Beyond these experiences, I've ventured into the world of blockchain, Web3, and artificial intelligence. As a Junior Web3 Developer, I've participated in hackathons, meetups, and boot camps, continually expanding my skill set in this dynamic field.
+					</p>
+					<p>
+						In all my endeavors, I've been driven by a commitment to efficiency, continuous improvement, and collaborative problem-solving. My goal is to leverage my financial expertise, coupled with my enthusiasm for emerging technologies, to drive innovation and positive change in the ever-evolving financial landscape
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>Bachelor of Arts (BA), Accounting and Finance, London Metropolitan University (2010 - 2013)</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Monitoring intraday activities and processes across multiple products and systems.
+Expertise in finance processes.
+Experience in QA, UAT for new and changed functionality.
+Understanding of risks and requirements for various types of collateral, including cryptocurrencies.
+Awareness of market risks and volatility on leveraged positions.
+Experience in setting up client services processes.
+Collaboration and team leadership.
+Proficiency in Google and Microsoft Office applications, including Excel and VBA.
+Effective communication skills.
+Basic understanding of Web3, Blockchain, and Artificial Intelligence technologies.</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

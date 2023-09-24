@@ -16,7 +16,7 @@ import Icon from './Icon.astro';
         <textarea name="message" placeholder="Message"></textarea>
       </div>
       <div>
-        <CallToAction><button type="submit">Send Me a Message <Icon icon="paper-plane-tilt" size="1.2em" /></button></CallToAction>
+        <CallToAction type="submit">Send Me a Message <Icon icon="paper-plane-tilt" size="1.2em" /></CallToAction>
       </div>
     </form>
 	<CallToAction href="mailto:thu@thuberry.com">
@@ -43,25 +43,27 @@ import Icon from './Icon.astro';
 		text-align: center;
 		max-width: 15ch;
 	}
+
+
 /* Contact form styles */
 
-form {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-}
+	form {
+ 	 width: 100%;
+ 	 max-width: 400px;
+	 margin: 0 auto;
+	}
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+	input, textarea {
+	  width: 100%;
+	  padding: 10px;
+	  margin-bottom: 10px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	}
 
-textarea {
-  height: 100px;
-}
+	textarea {
+	  height: 100px;
+	}
 
 
 

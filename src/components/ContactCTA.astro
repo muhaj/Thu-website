@@ -5,6 +5,20 @@ import Icon from './Icon.astro';
 
 <aside>
 	<h2>Interested in working together?</h2>
+        <form method="POST">
+      <div>
+        <input type="text" name="name" placeholder="Name" />
+      </div>
+      <div>
+        <input type="email" name="email" placeholder="Email" />
+      </div>
+      <div>
+        <textarea name="message" placeholder="Message"></textarea>
+      </div>
+      <div>
+        <button type="submit">Send</button>
+      </div>
+    </form>
 	<CallToAction href="mailto:thu@thuberry.com">
 		Send Me a Message
 		<Icon icon="paper-plane-tilt" size="1.2em" />

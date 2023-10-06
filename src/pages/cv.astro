@@ -1,11 +1,12 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Layout from '../layouts/Layout.astro';
 import { AstroComponent } from "@astrojs/core";
 import w3 from '../styles/w3.css';
 ---
 
 
-<Layout title="CV | Thu Chu - CV" description="CV Thu Chu background">
+<BaseLayout title="CV | Thu Chu - CV" description="CV Thu Chu background">
 
 
 <:body class="w3-light-grey">
@@ -149,7 +150,7 @@ import w3 from '../styles/w3.css';
   </a>
   <p>Powered by <a href="https://github.com/thuberry" target="_blank">thuberry</a></p>
 </:footer>
-</Layout>
+</BaseLayout>
 
 <style>
 	.about {

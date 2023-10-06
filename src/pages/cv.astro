@@ -1,30 +1,25 @@
 ---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+
 import Layout from '../layouts/Layout.astro';
 
 import w3 from '../styles/w3.css';
 ---
 
-<Layout title="CV | Thu Chu" description="CV Thu Chu background">
+<BaseLayout title="CV | Thu Chu" description="CV Thu Chu background">
 
-<!DOCTYPE html><html lang="en">
 <head>
 <title>Jane Doe - CV</title>
-<meta charset="UTF-8">
-<meta name="description" content="<your site description>">
-<meta name="keywords" content="HTML, CSS, JavaScript">
-<meta name="author" content="John Doe">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Astro v1.1.1">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/styles/global.css">
-<link rel="stylesheet" href="/styles/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="w3-light-grey">
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
@@ -159,5 +154,5 @@ import w3 from '../styles/w3.css';
   <p>Powered by <a href="https://github.com/dofbi/astro-cv-theme" target="_blank">dofbi</a></p>
 </footer>
 
-</body></html>
-<Layout>
+</body>
+<BaseLayout>
